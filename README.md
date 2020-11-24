@@ -16,9 +16,9 @@ ssh username@hpc.brc.berkeley.edu
 
 ```bash
 # sending to the server
-ssh (-r) local_path/A username@dtn.brc.berkeley.edu:path/A
+scp (-r) local_path/A username@dtn.brc.berkeley.edu:path/A
 # receive from the server
-ssh (-r) username@dtn.brc.berkeley.edu:path/A local_path/A 
+scp (-r) username@dtn.brc.berkeley.edu:path/A local_path/A 
 ```
 
 ##### adding the software
