@@ -44,7 +44,7 @@ bash Anaconda3-2020.11-Linux-x86_64.sh
 
 - add the path
 ```bash 
-echo 'export PATH=“/global/scratch/<username>/<anaconda-path>/bin:$PATH”' ~/.bashrc
+echo 'export PATH=“/global/scratch/<username>/<anaconda-path>/bin:$PATH”' >> ~/.bashrc
 source ~/.bashrc
 ```
 
