@@ -30,6 +30,7 @@ mv basic.vim ~/.vimrc
 
 ###### vim basics
 - <kbd>i</kbd>: insert before the cursor
+- <kbd>Esc</kbd>: exit insert mode
 - <kbd>Esc</kbd>+<kbd>:w</kbd>: write (save) the file, but don't exit
 - <kbd>Esc</kbd>+<kbd>:q</kbd>: quit (fails if there are unsaved changes)
 - <kbd>Esc</kbd>+<kbd>:q!</kbd>: quit and throw away unsaved changes
