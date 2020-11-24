@@ -21,6 +21,27 @@ scp (-r) local_path/A username@dtn.brc.berkeley.edu:path/A
 scp (-r) username@dtn.brc.berkeley.edu:path/A local_path/A 
 ```
 
+##### Making vim available!
+
+```bash 
+wget https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim
+mv basic.vim ~/.vimrc
+```
+
+##### Install the anaconda 
+- Download the [anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
+```bash 
+wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
+bash Anaconda3-2020.11-Linux-x86_64.sh
+```
+
+- add the path
+```bash 
+echo 'export PATH=“/global/scratch/<username>/<anaconda-path>/bin:$PATH”' ~/.bashrc
+source ~/.bashrc
+```
+
+
 ##### adding the software
 
 <ul>
