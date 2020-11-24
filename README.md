@@ -28,6 +28,12 @@ wget https://raw.githubusercontent.com/amix/vimrc/master/vimrcs/basic.vim
 mv basic.vim ~/.vimrc
 ```
 
+###### vim basics
+- <kbd>i</kbd>: insert before the cursor
+- <kbd>Esc</kbd>+<kbd>:w</kbd>: write (save) the file, but don't exit
+- <kbd>Esc</kbd>+<kbd>:q</kbd>: quit (fails if there are unsaved changes)
+- <kbd>Esc</kbd>+<kbd>:q!</kbd>: quit and throw away unsaved changes
+
 ##### Install the anaconda 
 - Download the [anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
 ```bash 
