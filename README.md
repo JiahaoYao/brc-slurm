@@ -120,6 +120,36 @@ matlab main.m
 
 -   you can find the [hardware config](https://docs-research-it.berkeley.edu/services/high-performance-computing/user-guide/hardware-config)
 
+### advanced usage
+```bash
+pip install sysflow
+```
+
+##### config the slurm  
+```
+slurm config 
+```
+
+##### run the jobs
+```
+slurm run [python test.py --arg1 5 --arg2 3]
+```
+
+##### examples in python 
+```
+from sysflow.job.slurm import Slurm
+
+# use the last config
+slurm = Slurm()
+
+# change the config 
+# slurm = Slurm(job_name='hello-word', email='abc@abc.com', conda_env='qrl')
+
+# change the account or partition
+# slurm = Slurm(account='co_esmath', qos='esmath_savio3_normal', partition='savio3')
+
+slurm.run('python test.py')
+```
 
 
 ### Reference
