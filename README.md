@@ -126,17 +126,17 @@ pip install sysflow
 ```
 
 ##### config the slurm  
-```
+```bash
 slurm config 
 ```
 
 ##### run the jobs
-```
+```bash
 slurm run [python test.py --arg1 5 --arg2 3]
 ```
 
 ##### examples in python 
-```
+```python
 from sysflow.job.slurm import Slurm
 
 # use the last config
