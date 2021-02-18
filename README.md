@@ -150,6 +150,10 @@ slurm = Slurm()
 
 slurm.run('python test.py')
 ```
+```bash 
+slurm config --account fc_esmath --qos savio_normal
+slurm config --account co_esmath --qos esmath_savio3_normal
+```
 
 
 ### Reference
