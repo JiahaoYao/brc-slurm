@@ -153,6 +153,7 @@ slurm.run('python test.py')
 ```bash 
 slurm config --account fc_esmath --qos savio_normal
 slurm config --account co_esmath --qos esmath_savio3_normal --partition savio3 --task_per_node 32
+slurm config --account co_esmath --qos savio_lowprio --partition savio2 --task_per_node 24
 ```
 
 
