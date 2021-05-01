@@ -161,4 +161,4 @@ slurm config --account co_esmath --qos savio_lowprio --partition savio2 --task_p
 
 -   [official reference](https://docs-research-it.berkeley.edu/services/high-performance-computing/user-guide/)
 -   [others (chinese)](http://bicmr.pku.edu.cn/~wenzw/pages/slurm.html)
-
+-   [cheatsheet](https://arc.umich.edu/wp-content/uploads/sites/4/2020/05/Great-Lakes-Cheat-Sheet.pdf)
