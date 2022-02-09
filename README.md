@@ -113,9 +113,11 @@ conda activate myenv
 # run my jobs
 bash myscript.sh
 
+# python jobs
 python myscript.py
 
-matlab main.m
+# matlab jobs
+matlab < main.m 
 ```
 
 -   you can find the [hardware config](https://docs-research-it.berkeley.edu/services/high-performance-computing/user-guide/hardware-config)
