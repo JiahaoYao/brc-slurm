@@ -120,6 +120,51 @@ python myscript.py
 matlab < main.m 
 ```
 
+
+
+One example of ` myjob.sh` (**GPU Instance**)
+
+```
+#!/bin/bash
+# Job name:
+#SBATCH --job-name=test
+#
+# Account:
+#SBATCH --account=co_esmath
+#
+# Partition:
+#SBATCH --partition=savio3_gpu
+#
+# Quality of Service:
+#SBATCH --qos=esmath_gpu3_normal
+# Number of nodes: 
+#SBATCH --nodes=1
+# Processors per task 
+#SBATCH --cpus-per-task=2
+#
+#SBATCH --gres=gpu:GTX2080TI:1
+# Wall clock limit:
+#SBATCH --time=24:00:00
+# Email Notification
+#SBATCH --mail-type=END, FAIL
+#SBATCH --mail-user=google@gmail.com
+#
+## Command(s) to run:
+
+# load gpu related 
+module load gcc openmpi
+module load cuda/11.2
+module load cudnn/7.0.5
+export CUDA_PATH=/global/software/sl-7.x86_64/modules/langs/cuda/11.2
+export LD_LIBRARY_PATH=$CUDA_PATH/lib64:$LD_LIBRARY_PATH
+ 
+# if one use conda for the python environment
+conda activate myenv
+
+# python jobs
+XLA_FLAGS=--xla_gpu_cuda_data_dir=/global/software/sl-7.x86_64/modules/langs/cuda/11.2 python myscript.py
+```
+
 -   you can find the [hardware config](https://docs-research-it.berkeley.edu/services/high-performance-computing/user-guide/hardware-config)
 
 ### advanced usage
