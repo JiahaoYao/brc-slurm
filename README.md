@@ -35,7 +35,7 @@ mv basic.vim ~/.vimrc
 - <kbd>Esc</kbd>+<kbd>:q</kbd>: quit (fails if there are unsaved changes)
 - <kbd>Esc</kbd>+<kbd>:q!</kbd>: quit and throw away unsaved changes
 
-##### Install the anaconda 
+##### ~~Install the anaconda~~ (OUTDATED!)
 - Download the [anaconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)
 ```bash 
 wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
@@ -46,6 +46,38 @@ bash Anaconda3-2020.11-Linux-x86_64.sh
 ```bash 
 echo 'export PATH=“/global/scratch/<username>/<anaconda-path>/bin:$PATH”' >> ~/.bashrc
 source ~/.bashrc
+```
+
+
+##### use anaconda (OUTDATED!)
+
+```python
+module load python
+```
+
+Then, create the conda environment as usual. 
+
+Since the disk quota in the local storage is limited, we need to change the location using the following commands (https://stackoverflow.com/questions/67610133/how-to-move-conda-from-one-folder-to-another-at-the-moment-of-creating-the-envi)
+
+```markdown
+# create a new pkgs_dirs (wherever, doesn't have to be hidden)
+mkdir -p /big_partition/users/user/.conda/pkgs
+
+# add it to Conda as your default
+conda config --add pkgs_dirs /big_partition/users/user/.conda/pkgs
+
+# create a new envs_dirs (again wherever)
+mkdir -p /big_partition/users/user/.conda/envs
+
+# add it to Conda as your default
+conda config --add envs_dirs /big_partition/users/user/.conda/envs
+```
+
+- use cuda on brc
+
+```markdown
+module load cuda/10.2
+export XLA_FLAGS=--xla_gpu_cuda_data_dir=/global/software/sl-7.x86_64/modules/langs/cuda/10.2
 ```
 
 
