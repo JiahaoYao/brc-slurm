@@ -49,7 +49,7 @@ source ~/.bashrc
 ```
 
 
-##### use anaconda (OUTDATED!)
+##### use anaconda (NEW~)
 
 ```python
 module load python
